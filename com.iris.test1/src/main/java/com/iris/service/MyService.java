@@ -10,5 +10,5 @@ import com.iris.repository.EmployeeRepository;
 public interface MyService {
 	
  public Employee addNewEmployee(Employee emp); 
-        	
+ public Employee updateEmployee(Employee emp);
 }

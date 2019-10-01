@@ -15,6 +15,12 @@ public class MyServiceImpl implements MyService {
 		return  dao.save(emp);
 	}
 
+	@Override
+	public Employee updateEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 	
 
