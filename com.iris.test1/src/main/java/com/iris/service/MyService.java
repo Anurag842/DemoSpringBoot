@@ -11,5 +11,6 @@ import com.iris.repository.EmployeeRepository;
 public interface MyService {
 	
  public Employee addNewEmployee(Employee emp); 
+ public boolean showEmployee(int id); 
  public Employee updateEmployee(Employee emp);
 }

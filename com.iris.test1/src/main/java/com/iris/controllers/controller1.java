@@ -17,14 +17,20 @@ public class controller1 {
     @Autowired
     MyService service;
 	
-	 @RequestMapping()
-	    public Employee createEmployee(@RequestBody Employee newemp) {
-	        System.out.println(this.getClass().getSimpleName() + " - Create new employee method is invoked.");
-	        return service.addNewEmployee(newemp);
-	    }
-	 @RequestMapping("/welcome")                   // it will handle all request for /welcome
+	 
+	 @RequestMapping("/")                   // it will handle all request for /welcome
 	    public String SpringBootHello() {
 		 System.out.println("...............................................");
-	        return "welcome.jsp";           // welcome is view name. It will call welcome.jsp
+		 Employee emp=new Employee();
+		 emp.setName("Rounak");
+		 emp.setDepartment("IT");
+		 emp.setSalary(20000);
+		 Employee e=service.addNewEmployee(emp);
+		System.out.println( e.getId()+"...................................."+e.getName());
+		System.out.println(service.showEmployee(2));
+		
+		 
+		 
+	        return "welcome";           // welcome is view name. It will call welcome.jsp
 	    }
 }

@@ -14,7 +14,15 @@ public class MyServiceImpl implements MyService {
 	
 	@Override
 	public Employee addNewEmployee(Employee emp) {
+		System.out.println("inside myserviceimpl");
 		return  dao.save(emp);
+	}
+
+	@Override
+	public boolean showEmployee(int id) {
+		// 
+		
+		return dao.existsById(id);
 	}
 
 	@Override

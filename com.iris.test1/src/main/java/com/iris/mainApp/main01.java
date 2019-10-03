@@ -17,10 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan({"com.iris,controllers","com.iris.service","com.iris.Daos"})
 public class main01 {
 
-	   
-	    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-	        return application.sources(main01.class);
-	    }
+	
 	public static void main(String[] args) {
 		SpringApplication.run(main01.class, args);
 
