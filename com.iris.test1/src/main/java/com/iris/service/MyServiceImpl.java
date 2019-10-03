@@ -1,10 +1,12 @@
 package com.iris.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.iris.entities.Employee;
 import com.iris.repository.EmployeeRepository;
 
+@Service
 public class MyServiceImpl implements MyService {
 
 	@Autowired
@@ -12,7 +14,15 @@ public class MyServiceImpl implements MyService {
 	
 	@Override
 	public Employee addNewEmployee(Employee emp) {
+		System.out.println("inside myserviceimpl");
 		return  dao.save(emp);
+	}
+
+	@Override
+	public boolean showEmployee(int id) {
+		// 
+		
+		return dao.existsById(id);
 	}
 
 	@Override
